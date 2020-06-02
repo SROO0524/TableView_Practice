@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellID",for: indexPath) as? TableCustomcellTableViewCell else {return UITableViewCell()}
-        cell.frame = CGRect(x: 0, y: 0, width: 300, height: 500)
+      
         
         cell.update(station: viewModel.getStationAt(at: indexPath.row))
         return cell

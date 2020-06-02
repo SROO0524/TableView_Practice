@@ -15,7 +15,7 @@ class StationViewModel {
         Station(station: "청담역", lineNum: "2호선", changeLine: "환승역있음 없음"),
         Station(station: "강남역", lineNum: "2호선", changeLine: "환승역있음 없음"),
         Station(station: "군자역", lineNum: "2호선", changeLine: "환승역있음 없음"),
-        Station(station: "중곡역", lineNum: "2호선", changeLine: "환승역있음 없음"),
+        Station(station: "중곡역", lineNum: "2호선",  changeLine: "환승역있음 없음"),
     ]
     func numOfRows() -> Int {
         return stations.count
