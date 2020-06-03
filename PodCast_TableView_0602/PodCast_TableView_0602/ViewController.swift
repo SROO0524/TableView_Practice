@@ -8,42 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    // view Model과 연결
+    let viewModel = PodcastView()
     
-    let viewModel = PodCastViewModel()
-    
+    // tableView의 row
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numOfRows()
+        return viewModel.numOfRow()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath) as? TableViewCustom else {return UITableViewCell()}
-        
-        cell.update(podCast: viewModel.getpodCastAt(at: indexPath.row))
-        return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath) as? PodLabels else { return UITableViewCell()}
     }
     
-
     @IBOutlet weak var tableView : UITableView!
-
+    
+    
 }
 
-class TableViewCustom : UITableViewCell {
-    
-//    @IBOutlet weak var podDateLabel : UILabel!
-//    @IBOutlet weak var podTitleLabel : UILabel!
-//    @IBOutlet weak var podTextLabel : UILabel!
+class PodLabels : UITableViewCell {
     
     @IBOutlet weak var podDateLabel: UILabel!
-    
     @IBOutlet weak var podTitleLabel: UILabel!
-    
     @IBOutlet weak var podTextLabel: UILabel!
     
-    func update(podCast: podCast) {
-        podDateLabel.text = podCast.podDate
-        podTitleLabel.text = podCast.podTitle
-        podTextLabel.text = podCast.podText
+    func update(podCast: PodcastView) {
+        
+        
     }
     
 }

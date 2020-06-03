@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" rowHeight="200" id="tML-vA-fpq" customClass="TableViewCustom" customModule="PodCast_TableView_0602" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" rowHeight="200" id="tML-vA-fpq" customClass="PodLabels">
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tML-vA-fpq" id="MOC-KW-eH9">
@@ -53,9 +53,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="podDateLabel" destination="raI-yJ-BW3" id="2NE-yf-5sP"/>
-                                            <outlet property="podTextLabel" destination="sl8-NC-l8w" id="W3L-jw-fgs"/>
-                                            <outlet property="podTitleLabel" destination="fp6-kN-tsA" id="QMW-1O-Oki"/>
+                                            <outlet property="podDateLabel" destination="raI-yJ-BW3" id="OQw-bj-QgG"/>
+                                            <outlet property="podTextLabel" destination="sl8-NC-l8w" id="OOx-fp-Znf"/>
+                                            <outlet property="podTitleLabel" destination="fp6-kN-tsA" id="FCJ-O0-0qs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
