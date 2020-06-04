@@ -33,7 +33,7 @@ class PodLabels : UITableViewCell {
     @IBOutlet weak var podTextLabel: UILabel!
     
     func update(podCast: PodcastView) {
-        
+        podDateLabel.text = podCast.podDate
         
     }
     
