@@ -34,7 +34,6 @@ class PodLabels : UITableViewCell {
     
     func update(podCast: PodcastView) {
         podDateLabel.text = podCast.podDate
-        
     }
     
 }

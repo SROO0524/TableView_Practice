@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //viewContrroller와 viewModel을 연결
     let viewModel = StationViewModel()
      override func viewDidLoad() {
          super.viewDidLoad()
