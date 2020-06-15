@@ -8,32 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    // view Model과 연결
-    let viewModel = PodcastView()
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
-    // tableView의 row
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numOfRow()
+    let viewModel = PodCastVM()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath) as? PodLabels else { return UITableViewCell()}
-    }
-    
-    @IBOutlet weak var tableView : UITableView!
-    
-    
-}
 
-class PodLabels : UITableViewCell {
-    
-    @IBOutlet weak var podDateLabel: UILabel!
-    @IBOutlet weak var podTitleLabel: UILabel!
-    @IBOutlet weak var podTextLabel: UILabel!
-    
-    func update(podCast: PodcastView) {
-        podDateLabel.text = podCast.podDate
+    // 테이블 셀의 갯수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
     }
     
+    // 테이블 셀에 들어갈 데이터 설정
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+
 }
